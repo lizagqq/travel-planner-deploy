@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./AddRoutePage.css";
+import { API_URL } from "../config";
 
 // Функция для форматирования даты и времени из ISO 8601 в читаемый формат
 const formatDateTime = (isoString) => {
@@ -185,7 +186,7 @@ const AddRoutePage = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/trips", {
+            const response = await fetch(`${API_URL}/api/trips`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

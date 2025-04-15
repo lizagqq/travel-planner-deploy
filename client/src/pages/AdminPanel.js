@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { API_URL } from "../config";
 
 const AdminPanel = () => {
     const navigate = useNavigate();
@@ -29,7 +30,7 @@ const AdminPanel = () => {
 
         const fetchTrips = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/predefined-trips", {
+                const response = await fetch(`${API_URL}/api/predefined-trips`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (response.ok) {
@@ -70,7 +71,7 @@ const AdminPanel = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/predefined-trips", {
+            const response = await fetch(`${API_URL}/api/predefined-trips`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -107,7 +108,7 @@ const AdminPanel = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/api/predefined-trips/${editingTrip.id}`, {
+            const response = await fetch(`${API_URL}/api/predefined-trips/${editingTrip.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -132,7 +133,7 @@ const AdminPanel = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/predefined-trips/${id}`, {
+            const response = await fetch(`${API_URL}/api/predefined-trips/${id}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });

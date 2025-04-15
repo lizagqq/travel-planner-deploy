@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./RoutesPage.css";
+import { API_URL } from "../config";
 
 const RoutesPage = () => {
     const navigate = useNavigate();
@@ -47,7 +48,7 @@ const RoutesPage = () => {
         const fetchTrips = async () => {
             try {
                 console.log("Fetching trips with token:", token);
-                const response = await fetch("http://localhost:5000/api/trips", {
+                const response = await fetch(`${API_URL}/api/trips`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -122,7 +123,7 @@ const RoutesPage = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/trips/${tripId}`, {
+            const response = await fetch(`${API_URL}/api/trips/${tripId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -147,7 +148,7 @@ const RoutesPage = () => {
 
     const handleDelete = async (tripId) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/trips/${tripId}`, {
+            const response = await fetch(`${API_URL}/api/trips/${tripId}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });

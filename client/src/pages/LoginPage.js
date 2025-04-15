@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./LoginPage.css";
+import { API_URL } from "../config";
 
 const LoginPage = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -16,8 +17,8 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const url = isLogin
-            ? "http://localhost:5000/api/user/login"
-            : "http://localhost:5000/api/user/register";
+            ? `${API_URL}/api/user/login`
+            : `${API_URL}/api/user/register`;
         const body = isLogin
             ? { email, password }
             : { username, email, password };
