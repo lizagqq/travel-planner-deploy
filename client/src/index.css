@@ -1,0 +1,114 @@
+/* Сбрасываем стандартные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f9fc;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #4a90e2;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #f5a623;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Стили для карточек */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для кнопок */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+}
+
+.btn-secondary {
+  background-color: #f5a623;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #d48f1e;
+}
+
+.btn-danger {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #e55a5a;
+}
+
+.btn-success {
+  background-color: #50c878;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #42a663;
+}
+
+/* Анимация для плавного появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}

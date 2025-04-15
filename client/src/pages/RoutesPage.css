@@ -1,0 +1,143 @@
+.routes-page {
+    padding: 50px 0;
+}
+
+.page-title {
+    font-size: 36px;
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 40px;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.trip-card {
+    padding: 20px;
+}
+
+.trip-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trip-title {
+    font-size: 24px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.trip-dates,
+.trip-budget {
+    font-size: 16px;
+}
+
+.trip-destinations ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.trip-destinations li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.trip-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.section-title {
+    font-size: 24px;
+    color: #4a90e2;
+    margin: 20px 0 10px;
+}
+
+.add-destination-btn {
+    width: 100%;
+}
+
+.destination-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.destination-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7f9fc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.remove-destination-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-actions button {
+    flex: 1;
+}
+
+.no-trips {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.profile-container, .routes-page, .container {
+    display: block !important;
+    visibility: visible !important;
+}

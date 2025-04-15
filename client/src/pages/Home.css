@@ -1,0 +1,169 @@
+.route-card {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.route-details {
+    padding: 10px;
+}
+
+.route-title {
+    font-size: 24px;
+    color: #4a90e2;
+}
+
+.route-dates, .route-budget {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.route-destinations {
+    margin-top: 10px;
+}
+
+.route-destinations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.route-destinations li {
+    margin: 5px 0;
+}
+
+.route-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-form {
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.section-title {
+    font-size: 24px;
+    color: #4a90e2;
+    margin: 30px 0 20px;
+}
+
+.add-destination-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.destination-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.destination-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7f9fc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.destination-item div {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-destination-btn, .remove-destination-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.edit-destination-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-actions .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.home-page {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.no-routes {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}

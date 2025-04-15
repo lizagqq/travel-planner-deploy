@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #084298;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-link {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navbar-link:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+.navbar-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+  .navbar-link,
+  .navbar-btn {
+      width: 100%;
+  }
+}
+
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Приветствие */
+.navbar-username {
+  font-weight: 500;
+  color: #444;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Выравниваем приветствие и кнопку */
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Приветствие */
+.navbar-username {
+  font-weight: 500;
+  color: #444;
+}
+
+/* Адаптив для мобилок */
+@media (max-width: 768px) {
+  .navbar-links {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+  }
+
+  .navbar-user-section {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .navbar-btn {
+      width: 100%;
+  }
+}
