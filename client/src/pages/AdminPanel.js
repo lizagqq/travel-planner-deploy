@@ -30,7 +30,7 @@ const AdminPanel = () => {
 
         const fetchTrips = async () => {
             try {
-                const response = await fetch(`${API_URL}/api/predefined-trips`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (response.ok) {
@@ -71,7 +71,7 @@ const AdminPanel = () => {
         }
 
         try {
-            const response = await fetch(`${API_URL}/api/predefined-trips`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const AdminPanel = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${API_URL}/api/predefined-trips/${editingTrip.id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips/${editingTrip.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -133,7 +133,7 @@ const AdminPanel = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`${API_URL}/api/predefined-trips/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips/${id}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });
