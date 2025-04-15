@@ -6,7 +6,9 @@ const pool = new Pool({
     database: 'travel_planner', // Имя базы данных
     password: '1111',  // Пароль пользователя
     port: 5432,             // Порт подключения (по умолчанию 5432)
-    ssl: false,
+    ssl: {
+  rejectUnauthorized: false
+}
     
 });
 
