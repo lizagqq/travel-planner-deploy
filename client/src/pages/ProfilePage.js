@@ -24,7 +24,7 @@ const ProfilePage = () => {
         const fetchProfile = async () => {
             try {
                 console.log("Fetching profile data");
-                const resUser = await fetch(`${API_URL}/api/profile`, {
+                const resUser = await fetch(`${process.env.REACT_APP_API_URL}/api/profile`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 console.log("Profile response status:", resUser.status);
@@ -35,7 +35,7 @@ const ProfilePage = () => {
                 console.log("Profile data:", userData);
 
                 console.log("Fetching trips data");
-                const resTrips = await fetch(`${API_URL}/api/trips`, {
+                const resTrips = await fetch(`${process.env.REACT_APP_API_URL}/api/trips`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 console.log("Trips response status:", resTrips.status);
