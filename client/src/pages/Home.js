@@ -62,7 +62,7 @@ const Home = () => {
     useEffect(() => {
         const fetchUserRole = async () => {
             try {
-                const response = await fetch(`${API_URL}/api/user/me`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/user/me`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 const data = await response.json();
@@ -76,7 +76,7 @@ const Home = () => {
 
         const fetchRoutes = async () => {
             try {
-                const response = await fetch(`${API_URL}/api/predefined-trips`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips`, {
                     headers: { "Content-Type": "application/json" },
                 });
                 const data = await response.json();
@@ -172,7 +172,7 @@ const Home = () => {
             return;
         }
         try {
-            const response = await fetch(`${API_URL}/api/predefined-trips/${routeId}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips/${routeId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -197,7 +197,7 @@ const Home = () => {
     const handleDeleteRoute = async (routeId) => {
         if (!window.confirm("Вы уверены, что хотите удалить этот маршрут?")) return;
         try {
-            const response = await fetch(`${API_URL}/api/predefined-trips/${routeId}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips/${routeId}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });
@@ -224,7 +224,7 @@ const Home = () => {
             return;
         }
         try {
-            const response = await fetch(`${API_URL}/api/predefined-trips`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/predefined-trips`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
