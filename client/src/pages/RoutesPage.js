@@ -48,7 +48,7 @@ const RoutesPage = () => {
         const fetchTrips = async () => {
             try {
                 console.log("Fetching trips with token:", token);
-                const response = await fetch(`${API_URL}/api/trips`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/trips`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -123,7 +123,7 @@ const RoutesPage = () => {
         }
 
         try {
-            const response = await fetch(`${API_URL}/api/trips/${tripId}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/trips/${tripId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -148,7 +148,7 @@ const RoutesPage = () => {
 
     const handleDelete = async (tripId) => {
         try {
-            const response = await fetch(`${API_URL}/api/trips/${tripId}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/trips/${tripId}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });
